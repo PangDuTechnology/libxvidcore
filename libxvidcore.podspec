@@ -28,7 +28,8 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
    s.requires_arc = false
    s.static_framework = true
-   s.xcconfig = { 'HEADER_SEARCH_PATHS'=> '"$(SDKROOT)/libxvidcore/include/*.h",
+   s.xcconfig = { 'HEADER_SEARCH_PATHS'=> '"$(SDKROOT)/libxvidcore/include/*.h"',
+   
                   'LIBRARY_SEARCH_PATHS'=> '"$(SDKROOT)/libxvidcore/lib"'
   }
 end
