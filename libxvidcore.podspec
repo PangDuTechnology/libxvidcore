@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.source_files  = "libxvidcore/include/*.h"
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.header_mappings_dir = "libxvidcore/include"
-  s.preserve_paths = "contains/libxvidcore/**/**"
+  s.preserve_paths = "libxvidcore/**/**"
   s.vendored_libraries = "libxvidcore/lib/libxvidcore.a"
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.libraries = ["c", "c++","z","iconv","bz2"]
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
    s.requires_arc = false
    s.static_framework = true
    s.xcconfig = { 'HEADER_SEARCH_PATHS'=> '"$(SDKROOT)/libxvidcore/include/*.h"',
-   
+
                   'LIBRARY_SEARCH_PATHS'=> '"$(SDKROOT)/libxvidcore/lib"'
   }
 end
