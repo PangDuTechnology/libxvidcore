@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "libxvidcore"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "xvidcore."
 
   # This description is used to generate tags and improve search results.
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.author             = { "PangDu" => "xian312117@gmail.com" }
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.platform     = :ios, "8.0"
-  s.ios.deployment_target = '8.0'
+  s.platform     = :ios, "13.0"
+  s.ios.deployment_target = '13.0'
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source       = { :git => "https://github.com/PangDuTechnology/libxvidcore.git", :tag => s.version.to_s }
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
