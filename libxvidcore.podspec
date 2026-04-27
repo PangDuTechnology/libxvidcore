@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "libxvidcore"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "xvidcore."
 
   # This description is used to generate tags and improve search results.
@@ -28,8 +28,12 @@ Pod::Spec.new do |s|
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
    s.requires_arc = false
    s.static_framework = true
-   s.xcconfig = { 'HEADER_SEARCH_PATHS'=> '"$(SDKROOT)/libxvidcore/include/*.h"',
-
-                  'LIBRARY_SEARCH_PATHS'=> '"$(SDKROOT)/libxvidcore/lib"'
-  }
+   s.pod_target_xcconfig = {
+     'HEADER_SEARCH_PATHS' => '$(inherited) "$(PODS_TARGET_SRCROOT)/libxvidcore/include"',
+     'LIBRARY_SEARCH_PATHS' => '$(inherited) "$(PODS_TARGET_SRCROOT)/libxvidcore/lib"'
+   }
+   s.user_target_xcconfig = {
+     'HEADER_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/libxvidcore/libxvidcore/include"',
+     'LIBRARY_SEARCH_PATHS' => '$(inherited) "${PODS_ROOT}/libxvidcore/libxvidcore/lib"'
+   }
 end
